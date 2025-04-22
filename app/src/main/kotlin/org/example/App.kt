@@ -1,13 +1,13 @@
 
 package org.example
 
-import java.time.LocalDate
-
 fun main() {
-    fun nombre_y_fecha(): String {
-        val fechaActual = LocalDate.now()
-        val nombre = "Noah"
-        return ("Nombre: $nombre \nFecha actual: $fechaActual")
-    } 
-    println(nombre_y_fecha())
+    fun <T> mostrar_tipo(variable: T): String {
+        return "Variable de tipo: ${variable!!::class.simpleName}"
+    }
+    val nombre = "Noah"
+    val num = 24
+    val bool = true
+    val decimal = 3.14
+    println(mostrar_tipo(bool))
 }
