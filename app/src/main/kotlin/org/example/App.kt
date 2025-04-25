@@ -22,6 +22,31 @@ fun positivo(num: Int): String{
         return "Cero"
     }
 }
+fun uno_al_diez() {
+    println("Con for:")
+    for (x in 1..10) {
+        println(x)
+    }
+    println("Con while:")
+    var x = 1
+    while (x<=10) {
+        println(x)
+        x++
+    }
+    println("Con do while:")
+    x = 1
+    do {
+        println(x)
+        x++
+    } while (x<=10)
+}
+fun pares_al_veinte() {
+    for (x in 1..20){
+        if (x%2 == 0){
+            println(x)
+        }
+    }
+}
 fun main() {
     val nombre = "Noah"
     val num = 24
@@ -31,4 +56,6 @@ fun main() {
     println(area_rectangulo(5.0, 3.0))
     println(par_o_impar(16))
     println(positivo(0))
+    println(uno_al_diez())
+    println(pares_al_veinte())
 }
