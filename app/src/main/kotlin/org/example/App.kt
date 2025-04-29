@@ -64,6 +64,20 @@ fun potencia(base: Double, exp: Int): Double {
     }
     return resultado
 }
+fun explicarVisibilidad() {
+   val mensaje = "Visible en toda esta función"
+   
+   if (mensaje.length > 5) {
+       val resultado = "Solo existo dentro del if"
+       println("$resultado y puedo ver: $mensaje")
+   }
+   
+   for (indice in 1..2) {
+       val elementoTemporal = "Item temporal #$indice"
+       println("$elementoTemporal usando información de: $mensaje")
+   }
+}
+
 fun main() {
     val nombre = "Noah"
     val num = 24
@@ -78,4 +92,5 @@ fun main() {
     println(factorial(5))
     println(saludar("noah"))
     println(potencia(5.0, 3))
+    println(explicarVisibilidad())
 }
