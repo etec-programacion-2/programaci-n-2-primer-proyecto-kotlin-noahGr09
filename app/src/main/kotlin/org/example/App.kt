@@ -47,6 +47,23 @@ fun pares_al_veinte() {
         }
     }
 }
+fun factorial(num: Int): Int{
+    var a = num
+    for (x in 1..num-1){
+        a *= x
+    }
+    return a
+}
+fun saludar(nombre: String): String{
+    return "Hola $nombre"
+}
+fun potencia(base: Double, exp: Int): Double {
+    var resultado = 1.0
+    for (x in 1..exp) {
+        resultado *= base  
+    }
+    return resultado
+}
 fun main() {
     val nombre = "Noah"
     val num = 24
@@ -58,4 +75,7 @@ fun main() {
     println(positivo(0))
     println(uno_al_diez())
     println(pares_al_veinte())
+    println(factorial(5))
+    println(saludar("noah"))
+    println(potencia(5.0, 3))
 }
